@@ -93,12 +93,6 @@ img {
     z-index: var(--z-index);
 }
 
-.nav {
-    height: calc(var(--header-height) + 2rem);
-    column-gap: 3rem;
-    display: inline-flex;
-    flex-direction: row;
-}
 
 .nav__logo {
     color: var(--title-color);
@@ -106,36 +100,8 @@ img {
     transition: color .4s;
 }
 
-.nav__action ,  {
-    display: flex;
-    align-items: center;
-    column-gap: 1rem;
-}
-
-.nav__login , .nav__logo{
-    font-size: 1.25rem;
-    color: var(--title-color);
-    cursor: pointer;
-    transition: color .4s;
-}
 
 :is(.nav__login ,.nav__logo , .nav__link ):hover {
     color: var(--first-color);
 }
 
-.nav__list {
-    display: flex;
-    flex-direction:row;
-    column-gap: 2.5rem;
-    text-align: center;
-}
-
-.nav__link {
-    color: var(--title-color);
-    font-weight: var(--font-semi-bold);
-    transition: color .4s;
-}
-
-.nav__menu {
-    margin-left: auto;
-}
