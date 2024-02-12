@@ -7,40 +7,86 @@
       <link rel="stylesheet" href="/css/index.css">
       <title>Cloth Donation </title>
    </head>
-   <body>
-    <header>
+   <body>  
+    <!-- header style-->
+    <header class="header">
         <a href="#" class="logo">Sahaya.</a>
-        <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About Us</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <nav class="navbar">
+            <a href="#home" >Home</a>  
+            <a href="#about" class="active">About Us</a>
             <a href="#Guide">Guide</a>
-            <a href="#Featured">Featured</a>
-            <a href="#contact"> Contact us</a>
-            <a href="#" class="log"> <i class='bx bx-user'></i></a>
-        </nav>
+            <a href="#Featured">Featured</a> 
+            <a href="#contact">Contact Us</a>
+            <a href="#login" class="login-btn"><i class='bx bx-user'></i></a>
+            <span class="active-nav"></span>
+        </nav>  
     </header>
-    <section id="home" class="home-content">
-        <img src="/img/home.jpg" alt="" class="main__bg">
-        <div class="home-title">
-            <div class="home-info">
-                <h1> Donate Clothes,</br>Changes Lives</h1>  
-                <p> Join us in our mission to provide quality clothing 
-                    to those in need. Your old clothes can make a big difference.
-                </p>
-                <a href="" class="donate-btn">Donate</a>
+
+<!-- Home section Desgin START-->
+
+    <section class="home show-animate" id="home">
+        <div class="home-content">
+            <h1> Donate Clothes,<span> <br>Changes The Lives</span></h1>
+            <div class="text-animate">
+            </div>
+            <p> 
+                Join us in our mission to provide quality clothing to 
+                those in need. Your old clothes can make a big difference.
+            </p>
+            <div class="btn-box">
+                <a href="#" class="btn";>Donate Now</a>
+                <a href="#" class="btn" style="visibility: hidden">Let's Talk</a>
+            </div>
+        </div>
+
+        <div class="home-sci">
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class='bx bxl-twitter' ></i></a>
+            <a href="#"><i class='bx bxl-linkedin' ></i></a>
+        </div>
+        <div class="home-imgHover"></div>
+    </section> 
+
+    <section class="about" id="about">
+        <div class="about-content">
+            
+            <div class="about-main">
+                <div class="info">
+                    <h1> About Us</h1>
+                    <p>
+                        Welcome to Sahaya, where we're committed to fostering community upliftment through cloth donations. Our platform connects generous donors with trusted NGOs, ensuring that clothing reaches those most in need. With a focus on transparency and impact, we facilitate seamless interactions between donors and organizations dedicated to making a difference. Every contribution, whether it's a warm jacket for a homeless shelter or professional attire for job seekers, creates a ripple of positive change. Join us in our mission to spread warmth and dignity to communities worldwide. Together, we can make a lasting difference in the lives of those facing hardship.                
+                    </p>
+                </div>
+                <div class="pic">
+                    <img src="/img/missiion.avif" alt="">
+                </div>
+                
+            </div>
+            <hr>
+            <div class="about-extra">
+                <div class="about-mission">
+                <h3> Our Mission </h3>
+                <P>At Sahaya, our mission is simple yet profound: to bridge the gap between those who have excess clothing and those who are in desperate need of it. We believe that everyone deserves access to clean and appropriate clothing, and through our platform, we strive to make that a reality for individuals and families facing hardships around the world.</P>
+                </div>
+                <div class="about-join">
+                    <h3>Get Involved</h3>   
+                    <p>
+                        Join us in our mission to make a difference one garment at a time. Whether you're a donor looking to contribute clothing or an NGO seeking support, we welcome you to be a part of our community and help us spread warmth and compassion to those in need.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about">About</section>
+    <section id="Guide" id="Guide">
+        
+    </section>
 
-    <section id="Guide">Guide</section>
-
-    <section id="Featured">Portfolio</section>
+    <section id="Featured">Featured</section>
 
     <section id="contact">Contact</section>
-
-      <!--=============== MAIN JS ===============-->
+    
       <script src="/js/index.js"></script>
    </body>
 </html>
