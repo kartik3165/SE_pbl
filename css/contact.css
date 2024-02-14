@@ -126,11 +126,7 @@ h1 {
 .in{
     color: var(--text-color);
     padding: 12px;
-<<<<<<< HEAD
     width: 100%;
-=======
-    width: 250px;
->>>>>>> 6d0d652ffbd37e25995b78bf0aaf039abf7622de
     font-size: 1.7rem;
     background-color: var(--second-bg-color);
     color: var(--text-color);
@@ -216,4 +212,4 @@ footer {
 .deatils {
   display : flex;
   flex-direction :row;
-}s
+}
