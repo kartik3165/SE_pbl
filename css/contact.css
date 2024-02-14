@@ -34,10 +34,8 @@ body {
 }
 
 header {
-  margin-top: 20px;
   background-color: var(--heading-color);
   color: var(--second-bg-color);
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -91,6 +89,7 @@ header {
   border: 4px solid var(--second-bg-color);
   font-weight: 700;
 }
+
 .main-content {
     padding-top: 30px;
     padding-left: 50px;
@@ -104,18 +103,17 @@ h1 {
     color: var(--heading-color);
     font-size: 4.5rem;
     font-weight: 800;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
   
 .user-input {
+  padding-left: 30px;
   display: flex;
   flex-direction: column; 
   width: 50%;
-  background-color: red;
 }
 
 .admin-info {
-    background-color: green;
     width: 50%;
 }
 
@@ -128,11 +126,16 @@ h1 {
 .in{
     color: var(--text-color);
     padding: 12px;
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 250px;
+>>>>>>> 6d0d652ffbd37e25995b78bf0aaf039abf7622de
     font-size: 1.7rem;
     background-color: var(--second-bg-color);
     color: var(--text-color);
     font-size: 1.7rem;
+    border-radius: 5px;
 }
 
 .in:nth-child(1) {
@@ -157,23 +160,60 @@ button {
 .in-sub {
   margin-right: 25px;
   margin-bottom: 25px;
-  width: 635px;
+  width: 525px;
   color: var(--text-color);
-    padding: 12px;
-    margin-right: 25px;
-    font-size: 1.7rem;
-    background-color: var(--second-bg-color);
-    color: var(--text-color);
+  padding: 12px;
+  margin-right: 25px;
+  font-size: 1.7rem;
+  background-color: var(--second-bg-color);
+  color: var(--text-color);
+  border-radius: 5px;
 }
 
 textarea {
   color: var(--text-color);
   padding: 12px;
-  width: 635px;
+  width: 525px;
   margin-right: 25px;
   font-size: 1.7rem;
   background-color: var(--second-bg-color);
   color: var(--text-color);
   font-size: 1.7rem;
   resize: none;
+  margin-bottom: 50px;
+  border-radius: 5px;
 }
+
+.admin-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.contact h3 , .support h3 {
+  color: var(--heading-color);
+  font-size : 2.5rem ;
+  margin-bottom: 100px;
+} 
+
+.contact span , .support span {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color : var(--main-color);
+}
+
+.contact p , .support p {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  color: var(--text-color);
+}
+
+footer {
+  display : flex;
+  flex-direction :row;
+}
+
+.deatils {
+  display : flex;
+  flex-direction :row;
+}s
