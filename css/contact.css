@@ -1,1 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --bg-color : white;
+  --second-bg-color : aliceblue ;
+  --text-color : #73788d;
+  --main-color : #2467eb;
+  --heading-color : #02042e;
+}
+
+html {
+  font-size: 65.5%;
+  overflow-x : hidden;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+header {
+    margin-top: 0px;
+    background-color: var(--heading-color);
+    color: var(--second-bg-color);
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+  }
+  
+  .header.sticky {
+    background: var(--bg-color);
+  }
+  
+  .logo {
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--second-bg-color);
+    font-weight: 600;
+    float: left;
+  }
+  
+  .navbar {
+    position: relative;
+  }
+  
+  .navbar a {
+    font-size: 1.7rem;
+    color: var(--second-bg-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+  }
+  
+  .navbar a:hover,
+  .navbar a.active {
+    text-decoration-line: underline;
+  }
+  
+  .nav_login-btn {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border: 2px solid var(--second-bg-color);
+    border-radius: 25px;
+  }
+  
+  .nav_login-btn:hover {
+    border: 4px solid var(--second-bg-color);
+    font-weight: 700;
+  }
+
+.main-content {
+    padding-top: 30px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    padding-top: 30px;
+    padding-left: 50px;
+    color: var(--heading-color);
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 80px;
+}
+  
+.user-input {
+   
+    width: 50%;
+}
+
+.admin-info {
+    background-color: green;
+    width: 50%;
+}
+
+.holder {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.in{
+    color: var(--text-color);
+    padding: 12px;
+    width: 100%;
+    margin-right: 15px;
+    font-size: 1.7rem;
+    background-color: var(--second-bg-color);
+}
+
+button {
+    background: var(--main-color);
+    color: var(--second-bg-color);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 25px;
+    font-size: 1.5rem;
+    margin-left: 5px;
+    margin-bottom: 150px;
+    margin-top: 20px;
+}
