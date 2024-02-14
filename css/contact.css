@@ -34,64 +34,63 @@ body {
 }
 
 header {
-    margin-top: 0px;
-    background-color: var(--heading-color);
-    color: var(--second-bg-color);
-    /*position: fixed;*/
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1rem 9%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-    transition: .3s;
-  }
-  
-  .header.sticky {
-    background: var(--bg-color);
-  }
-  
-  .logo {
-    position: relative;
-    font-size: 2.5rem;
-    color: var(--second-bg-color);
-    font-weight: 600;
-    float: left;
-  }
-  
-  .navbar {
-    position: relative;
-  }
-  
-  .navbar a {
-    font-size: 1.7rem;
-    color: var(--second-bg-color);
-    font-weight: 500;
-    margin-left: 3.5rem;
-    transition: .3s;
-  }
-  
-  .navbar a:hover,
-  .navbar a.active {
-    text-decoration-line: underline;
-  }
-  
-  .nav_login-btn {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border: 2px solid var(--second-bg-color);
-    border-radius: 25px;
-  }
-  
-  .nav_login-btn:hover {
-    border: 4px solid var(--second-bg-color);
-    font-weight: 700;
-  }
+  margin-top: 20px;
+  background-color: var(--heading-color);
+  color: var(--second-bg-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  transition: .3s;
+}
 
+.header.sticky {
+  background: var(--heading-color);
+}
+
+.logo {
+  position: relative;
+  font-size: 2.5rem;
+  color: var(--second-bg-color);
+  font-weight: 600;
+  float: left;
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--second-bg-color);
+  font-weight: 500;
+  margin-left: 3.5rem;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  text-decoration-line: underline;
+}
+
+.nav_login-btn {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border: 2px solid var(--second-bg-color);
+  border-radius: 25px;
+}
+
+.nav_login-btn:hover {
+  border: 4px solid var(--second-bg-color);
+  font-weight: 700;
+}
 .main-content {
     padding-top: 30px;
     padding-left: 50px;
@@ -109,8 +108,10 @@ h1 {
 }
   
 .user-input {
-   
-    width: 50%;
+  display: flex;
+  flex-direction: column; 
+  width: 50%;
+  background-color: red;
 }
 
 .admin-info {
@@ -128,9 +129,15 @@ h1 {
     color: var(--text-color);
     padding: 12px;
     width: 100%;
-    margin-right: 15px;
+    margin-right: ;
     font-size: 1.7rem;
     background-color: var(--second-bg-color);
+    color: var(--text-color);
+    font-size: 1.7rem;
+}
+
+.in:nth-child(1) {
+  margin-right: 25px;
 }
 
 button {
@@ -145,4 +152,29 @@ button {
     margin-left: 5px;
     margin-bottom: 150px;
     margin-top: 20px;
+    width: fit-content;
+}
+
+.in-sub {
+  margin-right: 25px;
+  margin-bottom: 25px;
+  width: 635px;
+  color: var(--text-color);
+    padding: 12px;
+    margin-right: 25px;
+    font-size: 1.7rem;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
+}
+
+textarea {
+  color: var(--text-color);
+  padding: 12px;
+  width: 635px;
+  margin-right: 25px;
+  font-size: 1.7rem;
+  background-color: var(--second-bg-color);
+  color: var(--text-color);
+  font-size: 1.7rem;
+  resize: none;
 }
