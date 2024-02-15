@@ -127,7 +127,7 @@ h1 {
 .in{
     color: var(--text-color);
     padding: 12px;
-    width: 100%;
+    width: 250px;
     font-size: 1.7rem;
     background-color: var(--second-bg-color);
     color: var(--text-color);
@@ -208,9 +208,91 @@ textarea {
 footer {
   display : flex;
   flex-direction :row;
+  font-size: 1.7rem;
+  justify-content: space-between;
+}
+.icon i {
+  margin-right: 10px;
+  font-size: 2rem;
+  margin-left: 15px;
+  color: var(--main-color);
 }
 
-.deatils {
+.deatils ul {
   display : flex;
   flex-direction :row;
+  justify-content: space-between;
+  color: var(--text-color);
+}
+.deatils ul li {
+  margin-right: 50px;
+}
+
+.name {
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+  background-color: #f9f9f9;
+}
+
+.question {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.question::after {
+  content: "+";
+  margin-left: auto;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .question::after {
+  content: "-";
+  transform: rotate(45deg);
+}
+
+.answer {
+  color: #666;
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.show-answer {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

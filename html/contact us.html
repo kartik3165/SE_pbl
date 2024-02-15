@@ -6,12 +6,21 @@
     <title>Contact Us</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/contact.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Contact us</title>
 </head>
 <body>
     <header>
         <a href="#" class="logo">Sahaya.</a>
           <nav class="navbar">
-            <a href="#home" class="active">Home</a>  
+            <a href="/html/index.html" class="active">Home</a>  
             <a href="#about" >About Us</a>
             <a href="#Guide">Guide</a>
             <a href="#Featured">Featured</a> 
@@ -47,7 +56,36 @@
             <span>Email</span>
             <p> xyz@gmail.com</p>
             <span>Phone</span>
+            <p> 98XXXXXXXX </p>
         </div>
+    </div>
+</div>
+<div class="faq-container">
+    <h2>Frequently Asked Questions</h2>
+    
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <h3 class="question">How does the donation process work?</h3>
+        <p class="answer">The donation process involves...</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <h3 class="question">What types of clothing items are accepted for donation?</h3>
+        <p class="answer">We accept...</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <h3 class="question">How are donated clothes distributed to NGOs?</h3>
+        <p class="answer">Donated clothes are distributed...</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <h3 class="question">Is my donation tax-deductible?</h3>
+        <p class="answer">Yes, your donation is...</p>
+    </div>
+
+    <div class="faq-item" onclick="toggleAnswer(this)">
+        <h3 class="question">What happens to clothes that cannot be donated?</h3>
+        <p class="answer">Clothes that cannot be donated...</p>
     </div>
 </div>
 <footer>
@@ -65,8 +103,9 @@
         </ul>
     </div>
     <div class="name">
-
+        <p>&copy; Sahaya</p>
     </div>
 </footer>
+<script src="/js/contact.js"></script>
 </body>
 </html>
