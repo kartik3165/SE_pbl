@@ -190,14 +190,17 @@ header {
 
 .collect {
   background:var(--bg-color);
-  justify-content: center;
   padding-left: 50px;
+  text-align: center;
+  align-content: center;
+
 }
 
 .collect-content,
 .step-content {
   padding-top: 30px;
-  text-align: center; 
+  text-align: center;
+
 }
 .collect-header h1 ,.step-header h1 , .partner-head h1 {
   color: var(--heading-color);
@@ -218,7 +221,8 @@ header {
   row-gap: 15px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 
 .card {
@@ -252,24 +256,23 @@ header {
 }
 
 .card-btn {
-  display: flex;
-  flex-direction: row;
   padding: 9px;
+  margin-bottom: 60px;
 }
 
-.card-btn button {
+.card-btn {
   border-radius: 25px;
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 1.5rem;
+  font-size: 2.1rem;
   font-weight: 600;
   background-color: var(--second-bg-color);
   color: var(--main-color);
 }
 
-.card-btn button:hover {
+.card-btn:hover {
   background-color: var(--main-color);
   color: var(--bg-color);
 }
@@ -281,6 +284,8 @@ header {
 }
 .card-btn a:hover {
   transform: scaleX(1.1);
+
+
 }
 .step {
   background:var(--second-bg-color);
@@ -347,6 +352,18 @@ header {
 
 .partner-head {
   padding-bottom: 50px;
+}
+
+.partner-btn {
+  border-radius: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 2.1rem;
+  font-weight: 600;
+  background-color: var(--main-color);
+  color: var(--bg-color);
 }
 
 .row ul {

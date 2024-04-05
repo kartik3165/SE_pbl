@@ -2,9 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
-
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -22,7 +19,7 @@
         <a href="/html/contact us.html">Contact Us</a>
         <span class="active-nav"></span>  
       </nav>
-    <span class="nav_login-btn"> Login/Signup </span>  
+    <!--<span class="nav_login-btn"> Login/Signup </span> -->
   </header>
     <div class="home-content">
       <span class="target"> 100% Non-profit platform</span>
@@ -32,7 +29,7 @@
       <p>
         We are greatly appreciate your donation, and your sacrifice. Your <br> support helps to further our mission through including.
       </p>
-      <button class="login-btn"><i class='bx bxs-heart'></i>  Donate Now</button>
+      <button class="login-btn" onclick="window.location.href='https://ide.geeksforgeeks.org/';"> <i class='bx bxs-heart'></i>  Donate Now</button>
     </div>
 </section>
 <section class="info">
@@ -45,7 +42,7 @@
       <p>
         Despite enough clothing worldwide, millions lack basic <br>garments. Climate disasters worsen this disparity. By <br>donating clothes, we bridge this gap, offering<br> dignity and warmth to those in need.<br> Join us in clothing the world.
       </p>
-      <button class="info-btn"> How to contribute ?</button>
+      <button class="info-btn" onclick="window.location.href='https://ide.geeksforgeeks.org/';" > How to contribute ?</button>
     </div>
   </div>
 </section>
@@ -63,10 +60,6 @@
         <h3> NGO Name ONE</h3>
         <p>here's an abundance of clothing in the world, yet millions still go without</p>
         <div class="progress-bar"></div>
-        <div class="card-btn">
-          <button>Donate Now</button>
-          <a href="">More Details</a>
-        </div>
       </div>
 
       <div class="card">
@@ -74,10 +67,6 @@
         <h3> NGO Name SECOND</h3>
         <p>here's an abundance of clothing in the world, yet millions still go without</p>
         <div class="progress-bar"></div>
-        <div class="card-btn">
-          <button>Donate Now</button>
-          <a href="">More Details</a>
-        </div>
       </div>
 
       <div class="card">
@@ -85,17 +74,14 @@
         <h3> NGO Name THIRD</h3>
         <p>here's an abundance of clothing in the world, yet millions still go without</p>
         <div class="progress-bar"></div>
-        <div class="card-btn">
-          <button>Donate Now</button>
-          <a href="">More Details</a>
-        </div>
       </div>
-
     </div>
+  <button class="card-btn" onclick="window.location.href='https://ide.geeksforgeeks.org/';" >Donate Now</button>
+  </div>
   </div>
 </section>
 
-<section class="step" id="step">
+<section class="step" id="Guide">
   <div class="step-content">
     <div class="step-header">
       <h1>Quick process of donation</h1>
@@ -135,7 +121,7 @@
   </div>
 </section>
 
-<section class="partner">
+<section class="partner" id="Featured">
   <div class="partner-content">
     <div class="partner-head">
       <h1>In Association with</h1>
@@ -156,6 +142,7 @@
         </ul>
     </div>
     </div>
+  <button class="partner-btn" onclick="window.location.href='https://ide.geeksforgeeks.org/';" > More </button>
   </div>
 </section>
 
@@ -165,13 +152,13 @@
       <img src="/img/step-1.jpg" alt="">
     </div>
     <div class="join-text">
-      <h1>Join with us<br>to help others</h1>
+      <h1>Join with us<br>as NGO</h1>
       <p>
         here's an abundance of clothing in the world,<br> yet millions still go without
       </p>
-      <input type="text" placeholder="Enter your name">
-      <input type="text" placeholder="Enter your email">
-      <input type="password" placeholder="Password">
+      <input type="text" placeholder="Enter NGO name">
+      <input type="text" placeholder="Operation Aera">
+      <!--<input type="password" placeholder="Password">-->
       <button class="join-btn"> Register Now </button>
     </div>
   </div>
@@ -193,8 +180,8 @@
       <div class="navigate">
         <p> Navigate </p>
         <ul>
-          <li><a href="">How it works</a></li>
-          <li><a href="">Donate fund</a></li>
+          <li><a href="#Guide">How it works</a></li>
+          <li><a href="#">Donate clothes</a></li>
           <li><a href="">Avaliable City</a></li>
           <li><a href="">Join us</a></li>
         </ul>
@@ -203,7 +190,7 @@
       <div class="support">
         <p>Support</p>
         <ul>
-          <li><a href="">Contact </a></li>
+          <li><a href="/html/contact us.html">Contact </a></li>
           <li><a href="">Donate us </a></li>
           <li><a href=""></a></li>
         </ul>
