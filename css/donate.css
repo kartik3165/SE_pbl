@@ -1,9 +1,76 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    list-style-type: none;
+    text-decoration: none;
 }
+
+:root {
+    --bg-color : white;
+    --second-bg-color : aliceblue ;
+    --text-color : #73788d;
+    --main-color : #2467eb;
+    --heading-color : #02042e;
+}
+
+html {
+    font-size: 65.5%;
+    overflow-x: hidden;
+}
+
+header {
+    margin-top: 20px;
+    background-color: var(--heading-color);
+    color: var(--second-bg-color);
+    /*position: fixed;*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+  }
+  
+  .header.sticky {
+    background: var(--bg-color);
+  }
+  
+  .logo {
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--second-bg-color);
+    font-weight: 600;
+    float: left;
+  }
+
+  .nav_login-btn {
+    font-size: 2rem;
+    color: var(--bg-color);
+    background-color: transparent;
+  }
+
+  .nav_login-btn span {
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+  }
+  
+body {
+    background: var(--heading-color);
+    color: var(--text-color);
+    font-size: 16px;
+    line-height: 1.75;
+    background-color: var(--heading-color);
+}
+
 .container {
     max-width: 600px;
     margin: 50px auto;
@@ -12,31 +79,160 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 h2 {
     text-align: center;
 }
+
 .form-control {
     margin-bottom: 20px;
 }
+
 label {
     display: block;
     font-weight: bold;
 }
-input[type="text"], select {
+
+input[type="text"], select, input[type="number"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-input[type="submit"] {
-    background-color: #4caf50;
+
+input[type="submit"], #addClothing {
+    background-color: var(--main-color);
     color: white;
     border: none;
     padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
     width: 100%;
+    margin-bottom: 10px;
 }
-input[type="submit"]:hover {
-    background-color: #45a049;
+
+input[type="submit"]:hover, #addClothing:hover {
+    background-color: var(--main-color);
 }
+
+#addClothing {
+    margin: 10px 0 10px 0;
+    width: 40%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--bg-color);
+  }
+  .left {
+    width: 40%;
+    padding-left: 30px;
+  }
+  
+  .left h1 {
+    color: var(--heading-color);
+    margin-bottom: 10px;
+  }
+  
+  .left-icon i {
+    margin-right: 10px;
+    font-size: 2.5rem;
+  }
+  
+  .left p {
+    margin-bottom: 10px;
+  }
+  
+  .right {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    justify-content: space-evenly;
+  }
+  
+  .navigate p , .support p , .contact p { 
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--heading-color);
+  }
+  
+  .navigate li a,
+  .support li a,
+  .contact li a{
+    font-size: 1.5rem;
+    color: var(--text-color);
+  }
+  
+  .navigate li:hover,
+  .support li:hover ,
+  .contact li:hover
+  {
+    font-weight: 500;
+  }
+  .navigate li ,
+  .support li ,
+  .contact li 
+   {
+    margin-bottom: 5px;
+  }
+
+  .step {
+    background:var(--heading-color);
+    padding-left: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  .step-header {
+    color: var(--bg-color);;
+  }
+  
+  .process-card {
+    display: flex;
+    flex-direction: row;
+    row-gap: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .step-card {
+    position: relative;
+    margin: 15px;
+    width: 30.33%;
+    /*border:2px solid #02042e;*/
+    padding: 18px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+  } 
+  
+  .step-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+  
+  .step-card span {
+    position: absolute;
+    background-color: var(--heading-color);
+    color: var(--bg-color);
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    left: 5px;
+    top: 5px;
+    border-radius: 50%;
+    border: 8px solid var(--bg-color);
+    font-weight: 500;
+  }
+  
+  .step-card h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: var(--heading-color);
+  }
+  
+  

@@ -536,18 +536,19 @@ footer {
 /* The popup form - hidden by default */
 .form-popup {
   display: none;
+  border: 2px solid var(--heading-color);
   position: fixed;
-  top: 20%;
+  top: 15%;
   left: 40%;
   border: 1px solid var(--second-bg-color);
-  border-radius: 25px;
   z-index: 9;
 }
 
 /* Add styles to the form container */
 .form-container {
+  
+  border: 2px solid var(--heading-color);
   max-width: 400px;
-  border-radius: 25px;
   padding: 20px;
   background-color: var(--bg-color);
 }
@@ -567,8 +568,13 @@ footer {
   outline: none;
 }
 
+.form-container h3 {
+  text-align: center;
+}
+
 /* Set a style for the submit/login button */
 .form-container .btn {
+  margin-top: 15px;
   border-radius: 25px;
   background-color: var(--heading-color);
   color: white;
