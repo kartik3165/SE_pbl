@@ -19,8 +19,24 @@
         <a href="/html/contact us.html">Contact Us</a>
         <span class="active-nav"></span>  
       </nav>
-    <!--<span class="nav_login-btn"> Login/Signup </span> -->
+    <button class="nav_login-btn" onclick="openForm()" > Login/Signup </button> 
   </header>
+      <div class="form-popup" id="myForm">
+        <form class="form-container">
+          <h1>Login/Signup</h1>
+          <label for="Name"><b>Name</b></label>
+          <input type="text" placeholder="Enter Name" name="name" required>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
     <div class="home-content">
       <span class="target"> 100% Non-profit platform</span>
       <h1>
@@ -206,6 +222,6 @@
     </div>
   </footer>
 </section>
-
+<script src="/js/index.js"></script>
 </body>
 </html>
