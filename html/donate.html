@@ -57,6 +57,10 @@
             <input type="text" id="pincode" name="pincode" required>
         </div>
         <div class="form-control">
+            <label for="schedulePickup">Schedule Pickup:</label>
+            <input type="datetime-local" id="schedulePickup" name="schedulePickup" required>
+        </div>
+        <div class="form-control">
             <label for="ngo">Choose an NGO:</label>
             <select id="ngo" name="ngo" required class="ngo-select">
                 <option value="">-- Select --</option>
@@ -71,45 +75,6 @@
         </div>
     </form>
 </div>
-
-<section class="step" id="Guide">
-    <div class="step-content">
-      <div class="step-header">
-        <h1>Quick process of donation</h1>
-      </div>
-      <div class="process-card">
-        <div class="step-card">
-          <img src="/img/sign-up.jpg" alt="">
-          <span> 1 </span>
-          <h3> Register Account</h3>
-          <p>There's an abundance of clothing in the world, yet millions still go without</p>
-        </div>
-  
-        <div class="step-card">
-          <img src="/img/step-1.jpg" alt="">
-          <span> 2 </span>
-          <h3> Fill Online Form</h3>
-          <p>There's an abundance of clothing in the world, yet millions still go without</p>
-        </div>
-  
-        <div class="step-card">
-          <img src="/img/step-3.jpg" alt="">
-          <span> 3 </span>
-          <h3> Scheduled Pick-up</h3>
-          <p>There's an abundance of clothing in the world, yet millions still go without</p>
-        </div>
-  
-        <!--<div class="step-card">
-          <img src="/img/step-1.jpg" alt="">
-          <span> 4 </span>
-          <h3> Register Account</h3>
-          <p>There's an abundance of clothing in the world, yet millions still go without</p>
-        </div>-->
-  
-      </div>
-    </div>
-  </section>
-
 <section class="end">
     <footer>
       <div class="left">
@@ -194,6 +159,7 @@
         var city = document.getElementById("city").value;
         var state = document.getElementById("state").value;
         var pincode = document.getElementById("pincode").value;
+        var schedulePickup = document.getElementById("schedulePickup").value;
 
         var donations = [];
         var clothingItems = document.querySelectorAll(".clothing-item");
@@ -210,6 +176,7 @@
         console.log("City: " + city);
         console.log("State: " + state);
         console.log("Pincode: " + pincode);
+        console.log("Scheduled Pickup: " + schedulePickup);
         console.log("Donations: ");
         console.log(donations);
 
