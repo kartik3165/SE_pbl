@@ -211,22 +211,24 @@ textarea {
 
 footer {
   display : flex;
-  flex-direction :row-reverse;
+  flex-direction :row;
   font-size: 1.7rem;
-  justify-content: space-between;
   padding-bottom: 30px;
+  justify-content: space-evenly;
 }
 .icon i {
   margin-right: 10px;
   font-size: 2rem;
   margin-left: 15px;
   color: var(--main-color);
+  float: left;
+ 
 }
 
 .deatils ul {
   display : flex;
   flex-direction :row;
-  color: var(--text-color);
+  color: var(--text-color);  
 }
 
 .deatils ul li {

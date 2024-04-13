@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-database.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/contact.css">
     <title>Contact us</title>
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Sahaya.</a>
-          <nav class="navbar">
-            <a href="/html/index.html" >Home</a>  
-            <a href="#about" >About Us</a>
-            <a href="#Guide">Guide</a>
-            <a href="#Featured">Featured</a> 
-            <a href="/html/contact us.html" class="active"> Contact Us </a>
-            <span class="active-nav"></span>  
+        <a href="/html/index.html" class="logo">Sahaya.</a>
+              <nav class="navbar">
+                <a href="#home" >Home</a>  
+                <a href="/html/about.html"  >About Us</a>
+                <a href="/html/index.html#Guide">Guide</a>
+                <a href="/html/index.html#Featured">Featured</a> 
+                <a href="/html/contact us.html" class="active">Contact Us</a>
+                <span class="active-nav"></span>  
           </nav>
       </header>
 <section class="content">
@@ -52,55 +55,18 @@
             </div>
         </div>
     </div>
-    <!--<div class="faq-container">
-        <h2>Frequently Asked Questions</h2>
-        
-        <div class="faq-item" onclick="toggleAnswer(this)">
-            <h3 class="question">How does the donation process work?</h3>
-            <p class="answer">The donation process involves...</p>
-        </div>
-
-        <div class="faq-item" onclick="toggleAnswer(this)">
-            <h3 class="question">What types of clothing items are accepted for donation?</h3>
-            <p class="answer">We accept...</p>
-        </div>
-
-        <div class="faq-item" onclick="toggleAnswer(this)">
-            <h3 class="question">How are donated clothes distributed to NGOs?</h3>
-            <p class="answer">Donated clothes are distributed...</p>
-        </div>
-
-        <div class="faq-item" onclick="toggleAnswer(this)">
-            <h3 class="question">Is my donation tax-deductible?</h3>
-            <p class="answer">Yes, your donation is...</p>
-        </div>
-
-        <div class="faq-item" onclick="toggleAnswer(this)">
-            <h3 class="question">What happens to clothes that cannot be donated?</h3>
-            <p class="answer">Clothes that cannot be donated...</p>
-        </div>
-    </div>-->
     <footer>
         <section class="foot">
-            <div class="icon">
-            <i class='bx bxl-facebook-circle'></i>
-            <i class='bx bxl-youtube' ></i>
-            <i class='bx bxl-instagram-alt' ></i>
-            <i class='bx bxl-twitter' ></i>
-            </div>
             <div class="deatils">
                 <ul>
-                    <li>Terms of Sevrices</li>
-                    <li>Privacy Policy</li>
-                    <li>Disclaimer</li>
+                    <li><a href="">Terms of Sevrices</a></li>
+                    <li><a href="">Privacy Policy</a></li>
                 </ul>
-            </div>
-            <div class="name">
-                <p>&copy; Sahaya</p>
             </div>
         </section>
     </footer>
 </section>
 <script src="/js/contact.js"></script>
+<script src="/js/firebase.js"></script>
 </body>
 </html>

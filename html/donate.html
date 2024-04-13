@@ -7,10 +7,13 @@
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
 <link rel="stylesheet" href="/css/donate.css">
+<!-- Firebase JavaScript SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js"></script>
 </head>
 <body>
     <header>
-        <a href="#" class="logo">Sahaya.</a>
+        <a href="/html/index.html" class="logo">Sahaya.</a>
         <button class="nav_login-btn" onclick="openForm()" ><i class='bx bx-user-circle'></i> <span>profile</span> </button> 
       </header>
 <div class="container">
@@ -182,7 +185,59 @@
 
         this.reset();
     });
-</script>
 
+    const firebaseConfig = {
+    apiKey: "AIzaSyDbx9s9iI4X4yvmO1w1f73OyiIRzoFYmFY",
+    authDomain: "sahaya-3165.firebaseapp.com",
+    projectId: "sahaya-3165",
+    storageBucket: "sahaya-3165.appspot.com",
+    messagingSenderId: "79471128063",
+    appId: "1:79471128063:web:8f12fc19879f9377b08bca",
+    measurementId: "G-JLQT6F6RJS"
+  };
+
+  var database = firebase.database();
+
+  document.getElementById("donationForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get form data
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var ngo = document.getElementById("ngo").value;
+    var street = document.getElementById("street").value;
+    var city = document.getElementById("city").value;
+    var state = document.getElementById("state").value;
+    var pincode = document.getElementById("pincode").value;
+    var schedulePickup = document.getElementById("schedulePickup").value;
+
+    // Push data to Firebase
+    var donationRef = database.ref("donations").push();
+    donationRef.set({
+      name: name,
+      email: email,
+      ngo: ngo,
+      street: street,
+      city: city,
+      state: state,
+      pincode: pincode,
+      schedulePickup: schedulePickup
+    }, function(error) {
+      if (error) {
+        console.error("Error adding donation:", error);
+      } else {
+        console.log("Donation added successfully!");
+        // Optionally, you can redirect the user to a thank you page
+        // window.location.href = "thank-you.html";
+      }
+    });
+
+    // Reset the form
+    this.reset();
+  });
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 </body>
 </html>
