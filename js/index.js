@@ -1,7 +1,7 @@
 var profile_btn = document.getElementById("profile");
 var login_btn = document.getElementById("login");
 
-profile_btn.style.display = "none";
+
 
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -20,13 +20,22 @@ window.onscroll = () => {
     });
 };
 
-let CheckCred = ()=> {
-   if (!sessionStorage.getItem("user-creds"))
-    login_btn.style.display = "none";
-    profile_btn.style.display = "block";
+let UserCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+let UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
+
+profile_btn.style.display = "none";
+login_btn.style.display = "block";
+
+let CheckCreds = () => {
+    if (sessionStorage.getItem("user-creds") && sessionStorage.getItem("user-info")) {
+        login_btn.style.display = "none";
+        profile_btn.style.display = "block";
+    }
 }
 
 window.addEventListener('load', CheckCreds);
+
+
 
 
 

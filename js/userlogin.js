@@ -25,28 +25,35 @@ const firebaseConfig = {
  let LoginForm = document.getElementById('loginForm');
  
  let SignInUser = evt => {
-     evt.preventDefault();
- 
-     signInWithEmailAndPassword(auth, login-email.value , login-password.value)
-     .then((Credential) =>{
-         get(child(dbref , 'UserAuthList/'+ Credential.user.uid)).then((snapshot) => {
+    evt.preventDefault();
+
+    // Log the value of Email to check if it's defined and capturing the correct value
+    console.log("Email value:", Email.value);
+
+    signInWithEmailAndPassword(auth, Email.value, Password.value)
+    .then((Credential) =>{
+        get(child(dbref, 'UserAuthList/' + Credential.user.uid)).then((snapshot) => {
             if(snapshot.exists){
                 sessionStorage.setItem("user-info", JSON.stringify({
                     firstname : snapshot.val().firstname,
-                    lastname : snapshot.val().lastname
-                }))
+                    lastname : snapshot.val().lastname,
+                    email : snapshot.val().email // Changed 'Email' to lowercase 'email'
+                }));
                 sessionStorage.setItem("user-creds", JSON.stringify(Credential.user));
                 window.location.href = '/html/index.html';
+            } else {
+                console.log("User data not found in the database.");
             }
-         })
-        
-     })
-     .catch((error)=>{
-         alert(error.message);
-         console.log(error.code);
-         console.log(error.message);
-     })
- }
+        }).catch((error) => {
+            console.log("Error retrieving user data:", error);
+        });
+    })
+    .catch((error)=>{
+        alert(error.message);
+        console.log(error.code);
+        console.log(error.message);
+    });
+}
  
  LoginForm.addEventListener('submit' , SignInUser );
  

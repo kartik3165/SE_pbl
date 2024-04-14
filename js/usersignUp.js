@@ -20,6 +20,10 @@
  const analytics = getAnalytics(app);
  const db = getDatabase();
  const auth = getAuth(app);
+ const signUpButton = document.getElementById('signUp');
+ const signInButton = document.getElementById('signIn');
+ const container = document.getElementById('container');
+
 
 let EmailInp = document.getElementById('emailInp');
 let PassInp = document.getElementById('passwordInp');
@@ -30,13 +34,21 @@ let RegisterForm = document.getElementById('registerForm');
 let RegisterUser = evt => {
     evt.preventDefault();
 
-    createUserWithEmailAndPassword(auth, EmailInp.value , PassInp.value)
+    createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value)
     .then((Credential) =>{
-        set(ref(db, 'UserAuthList/'+ Credential.user.uid ),{
-            firstname : FnameInp.value,
-            Lastname : LnameInp.value,
-            Email : EmailInp.value
-        })
+        set(ref(db, 'UserAuthList/' + Credential.user.uid), {
+            firstname: FnameInp.value,
+            lastname: LnameInp.value,
+            email: EmailInp.value // Corrected to lowercase 'email'
+        });
+
+        sessionStorage.setItem("user-info", JSON.stringify({
+            firstname: FnameInp.value,
+            lastname: LnameInp.value,
+            email: EmailInp.value
+        }));
+
+        sessionStorage.setItem("user-creds", JSON.stringify(Credential.user));
         window.location.href = '/html/index.html';
     })
     .catch((error)=>{

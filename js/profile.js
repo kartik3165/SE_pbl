@@ -1,16 +1,17 @@
 let UserCreds = JSON.parse(sessionStorage.getItem("user-creds"));
 let UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
 
-let Name = document.getElementById('fname');
-let SignOutbtn = document.getElementById('primary');
+let Name = document.getElementById('name');
+let Email = document.getElementById('email');
+let SignOutBtn = document.getElementById('sign-out-btn');
 
-Name.innerText = UserCreds.email;
-SignOut.innerText = UserInfo.firstname + " " + UserInfo.lastname;
+Name.innerText = UserInfo.firstname;
+Email.innerText = UserInfo.email;
 
 let SignOut = () => {
     sessionStorage.removeItem("user-creds");
-    sessionStorage.removeItem("UserInfo");
-    window.location.href ='/html/index.html'
+    sessionStorage.removeItem("user-info"); 
+    window.location.href = '/html/index.html';
 }
 
-SignOutbtn.addEventListener('click', SignOut);
+SignOutBtn.addEventListener('click', SignOut);
