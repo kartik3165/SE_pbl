@@ -19,26 +19,10 @@
         <a href="/html/contact us.html">Contact Us</a>
         <span class="active-nav"></span>  
       </nav>
-    <button class="nav_login-btn" onclick="window.location.href='/html/userAuth.html';" > Login/Signup </button> 
+    <button class="nav_login-btn" id="login" onclick="window.location.href='/html/userAuth.html';" > Login/Signup </button>
+    <button class="nav_login-btn" id="profile" onclick="window.location.href='/html/profile.html';" > profile </button> 
+ 
   </header>
-
-  <div class="form-popup" id="myForm">
-    <form class="form-container">
-      <h3>Login/Signup</h3>
-      <label for="Name"><b>Name</b></label>
-      <input type="text" placeholder="Enter Name" id="name" required>
-    
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" id="email" required>
-      
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" id="psw" required>
-      <p id="signup-message"></p>  Forgot Password 
-      <button type="submit" class="btn" onclick="loginSignup()">Login/Signup</button>
-      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-    </form>
-  </div>
-
 <section class="home" id="home">
     <div class="home-content">
       <span class="target"> 100% Non-profit platform</span>
@@ -220,7 +204,7 @@
   </footer>
 </section>
 <script src="/js/index.js"></script>
-<script type="module" src="/js/firebase.js"></script>
+<script type="module" src="/js/profile.js"></script>
 <script src="https://sheetdb.io/s/f/3ibprns9nqwvg.js"></script>
 </body>
 </html> 

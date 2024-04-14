@@ -1,3 +1,8 @@
+var profile_btn = document.getElementById("profile");
+var login_btn = document.getElementById("login");
+
+profile_btn.style.display = "none";
+
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 window.onscroll = () => {
@@ -15,17 +20,13 @@ window.onscroll = () => {
     });
 };
 
-  /* Open the form */
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-  }
-  
-  /* Close the form */
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }
+let CheckCred = ()=> {
+   if (!sessionStorage.getItem("user-creds"))
+    login_btn.style.display = "none";
+    profile_btn.style.display = "block";
+}
 
-
+window.addEventListener('load', CheckCreds);
 
 
 

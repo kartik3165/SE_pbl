@@ -35,10 +35,11 @@ const firebaseConfig = {
                     firstname : snapshot.val().firstname,
                     lastname : snapshot.val().lastname
                 }))
-                sessionStorage.setItem("user-cred", JSON.stringify(Credential.user));
+                sessionStorage.setItem("user-creds", JSON.stringify(Credential.user));
                 window.location.href = '/html/index.html';
             }
          })
+        
      })
      .catch((error)=>{
          alert(error.message);
