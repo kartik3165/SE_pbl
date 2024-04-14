@@ -7,13 +7,12 @@
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
 <link rel="stylesheet" href="/css/donate.css">
-<!-- Firebase JavaScript SDK -->
 </head>
 <body>
-    <header>
-        <a href="/html/index.html" class="logo">Sahaya.</a>
-        <button class="nav_login-btn" onclick="window.location.href='/html/profile.html';" ><i class='bx bx-user-circle'></i> <span>profile</span> </button> 
-      </header>
+<header>
+    <a href="/html/index.html" class="logo">Sahaya.</a>
+    <button class="nav_login-btn" onclick="window.location.href='/html/profile.html';" ><i class='bx bx-user-circle'></i> <span>profile</span> </button> 
+</header>
 <div class="container">
     <h2>Cloth Donation Form</h2>
     <form id="donationForm">
@@ -21,10 +20,17 @@
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required>
         </div>
+
         <div class="form-control">
             <label for="email">Email Address:</label>
             <input type="text" id="email" name="email" required>
         </div>
+
+        <div class="form-control">
+            <label for="number">Contact Number:</label>
+            <input type="number" id="phone" name="Phone Number" required>
+        </div>
+
         <div id="clothingContainer">
             <div class="clothing-item">
                 <label for="clothingType">Type of Clothing:</label>
@@ -62,76 +68,53 @@
             <label for="schedulePickup">Schedule Pickup:</label>
             <input type="datetime-local" id="schedulePickup" name="schedulePickup" required>
         </div>
-        <div class="form-control">
-            <label for="ngo">Choose an NGO:</label>
-            <select id="ngo" name="ngo" required class="ngo-select">
-                <option value="">-- Select --</option>
-                <option value="NGO A">NGO A</option>
-                <option value="NGO B">NGO B</option>
-                <option value="NGO C">NGO C</option>
-                <option value="NGO D">NGO D</option>
-            </select>
-        </div>
-        <div class="form-control">
-            <input type="submit" value="Donate">
-        </div>
+        <button id="donate-btn" type="submit"> Donate Now </button>
     </form>
 </div>
 <section class="end">
-    <footer>
-      <div class="left">
-        <h1>Sahaya.</h1>
-        <p> 2023-2024 Sahaya. is part of helping<br> people </p>
-        <div class="left-icon">
-          <i class='bx bxl-facebook-circle'></i>
-          <i class='bx bxl-youtube' ></i>
-          <i class='bx bxl-instagram-alt' ></i>
-          <i class='bx bxl-twitter' ></i>
-        </div>
-      </div>
-      <div class="right">
-        <div class="navigate">
-          <p> Navigate </p>
-          <ul>
-            <li><a href="#Guide">How it works</a></li>
-            <li><a href="#">Donate clothes</a></li>
-            <li><a href="">Avaliable City</a></li>
-            <li><a href="">Join us</a></li>
-          </ul>
-        </div>
-  
-        <div class="support">
-          <p>Support</p>
-          <ul>
-            <li><a href="/html/contact us.html">Contact </a></li>
-            <li><a href="">Donate us </a></li>
-            <li><a href=""></a></li>
-          </ul>
-        </div>
-  
-        <div class="contact">
-          <p>Contact</p>
-          <ul>
-            <li><a href="">88XXXXXX87 </a></li>
-            <li><a href="">XYZ@gmail.com </a></li>
-          </ul>
-        </div>
-      </div>
-    </footer>
-  </section>
+<footer>
+    <div class="left">
+    <h1>Sahaya.</h1>
+    <p> 2023-2024 Sahaya. is part of helping<br> people </p>
+    <div class="left-icon">
+        <i class='bx bxl-facebook-circle'></i>
+        <i class='bx bxl-youtube' ></i>
+        <i class='bx bxl-instagram-alt' ></i>
+        <i class='bx bxl-twitter' ></i>
+    </div>
+    </div>
+    <div class="right">
+    <div class="navigate">
+        <p> Navigate </p>
+        <ul>
+        <li><a href="#Guide">How it works</a></li>
+        <li><a href="#">Donate clothes</a></li>
+        <li><a href="">Available City</a></li>
+        <li><a href="">Join us</a></li>
+        </ul>
+    </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"></script>
+    <div class="support">
+        <p>Support</p>
+        <ul>
+        <li><a href="/html/contact us.html">Contact </a></li>
+        <li><a href="">Donate us </a></li>
+        <li><a href=""></a></li>
+        </ul>
+    </div>
+
+    <div class="contact">
+        <p>Contact</p>
+        <ul>
+        <li><a href="">88XXXXXX87 </a></li>
+        <li><a href="">XYZ@gmail.com </a></li>
+        </ul>
+    </div>
+    </div>
+</footer>
+</section>
+<!-- Include Firebase SDK from CDN -->
 <script>
-    // Initialize Select2 for the NGO spinner
-    $(document).ready(function() {
-        $('.ngo-select').select2({
-            placeholder: "-- Select --",
-            allowClear: true,
-            width: '100%'
-        });
-    });
-
     document.getElementById("addClothing").addEventListener("click", function() {
         var clothingContainer = document.getElementById("clothingContainer");
         var clothingItem = document.createElement("div");
@@ -144,6 +127,7 @@
                 <option value="Pants">Pants</option>
                 <option value="Dresses">Dresses</option>
                 <option value="Jackets">Jackets</option>
+                <option value="Saree">Saree</option>
                 <option value="Other">Other</option>
             </select>
             <label for="quantity">Quantity:</label>
@@ -156,7 +140,6 @@
         event.preventDefault();
         var name = document.getElementById("name").value;
         var email = document.getElementById("email").value;
-        var ngo = document.getElementById("ngo").value;
         var street = document.getElementById("street").value;
         var city = document.getElementById("city").value;
         var state = document.getElementById("state").value;
@@ -173,7 +156,6 @@
 
         console.log("Name: " + name);
         console.log("Email: " + email);
-        console.log("NGO: " + ngo);
         console.log("Street Address: " + street);
         console.log("City: " + city);
         console.log("State: " + state);
@@ -181,62 +163,10 @@
         console.log("Scheduled Pickup: " + schedulePickup);
         console.log("Donations: ");
         console.log(donations);
-
         this.reset();
     });
 
-    const firebaseConfig = {
-    apiKey: "AIzaSyDbx9s9iI4X4yvmO1w1f73OyiIRzoFYmFY",
-    authDomain: "sahaya-3165.firebaseapp.com",
-    projectId: "sahaya-3165",
-    storageBucket: "sahaya-3165.appspot.com",
-    messagingSenderId: "79471128063",
-    appId: "1:79471128063:web:8f12fc19879f9377b08bca",
-    measurementId: "G-JLQT6F6RJS"
-  };
-
-  var database = firebase.database();
-
-  document.getElementById("donationForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-
-    // Get form data
-    var name = document.getElementById("name").value;
-    var email = document.getElementById("email").value;
-    var ngo = document.getElementById("ngo").value;
-    var street = document.getElementById("street").value;
-    var city = document.getElementById("city").value;
-    var state = document.getElementById("state").value;
-    var pincode = document.getElementById("pincode").value;
-    var schedulePickup = document.getElementById("schedulePickup").value;
-
-    // Push data to Firebase
-    var donationRef = database.ref("donations").push();
-    donationRef.set({
-      name: name,
-      email: email,
-      ngo: ngo,
-      street: street,
-      city: city,
-      state: state,
-      pincode: pincode,
-      schedulePickup: schedulePickup
-    }, function(error) {
-      if (error) {
-        console.error("Error adding donation:", error);
-      } else {
-        console.log("Donation added successfully!");
-        // Optionally, you can redirect the user to a thank you page
-        // window.location.href = "thank-you.html";
-      }
-    });
-
-    // Reset the form
-    this.reset();
-  });
-  
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
 </script>
+<script type="module" src="/js/donate1.js"></script>
 </body>
 </html>
