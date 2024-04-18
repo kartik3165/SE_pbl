@@ -235,4 +235,9 @@ footer {
     color: var(--heading-color);
   }
   
+  #donate-btn {
+    padding: 8px;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+  }
   
